@@ -1,0 +1,21 @@
+<div id="pictures" [ngClass]="{
+    'fourcol': columns === 4,
+    'sixcol': columns === 6,
+    'eightcol': columns === 8,
+    'tencol': columns === 10,
+    'blur': gameEnded
+}">
+    <img draggable="false" [ngClass]="{
+        'four': columns === 4,
+        'six': columns === 6,
+        'eight': columns === 8,
+        'ten': columns === 10,
+        'blur': gameEnded
+    }" *ngFor="let picture of pictures" src="/assets/image/{{theme}}/{{picture}}.jpg" alt="{{theme}} {{picture}}"
+        (click)="showPic($event)">
+</div>
+<div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">{{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
+
+<div *ngIf="gameEnded" id="screen">
+<dialog open>A játékot {{time}} alatt oldottad meg!</dialog>
+</div>

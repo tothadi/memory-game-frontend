@@ -1,0 +1,163 @@
+#pictures {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+}
+
+@media only screen and (orientation: landscape) {
+    
+    .four {
+        height: 23.5%;
+    }
+    .six {
+        height: 23.5%;
+    }
+    .eight {
+        height: 15.5%;
+    }
+    .ten {
+        height: 18.5%;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 14/9)  {
+    .eight {
+        height: 22%;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .four {
+        height: 16%;
+    }
+    .six {
+        height: 16%;
+    }
+    .eight {
+        height: 12%;
+    }
+    .ten {
+        height: 9.6%;
+        width: 10%
+    }
+}
+
+@media only screen and (orientation: portrait) and (aspect-ratio: 1024/1366), (aspect-ratio: 768/1024) {
+    .four {
+        height: 21%;
+    }
+    .eight {
+        height: 15.5%;
+    }
+    .ten {
+        height: 14%;
+        width: 9.5%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-aspect-ratio: 9/18)  {
+    .six {
+        width: 15.5%;
+    }
+    .ten {
+        height: 9.6%;
+        width: 12%
+    }
+}
+
+img {
+    cursor: pointer;
+    margin: .2%;
+    border-radius: 8px;
+    background-color: goldenrod;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+    transition: all 1s ease-in-out;
+    object-fit: cover;
+    border: none;
+    filter: brightness(0);
+    -webkit-filter: brightness(0);
+}
+
+@media only screen and (max-width: 900px) {
+    img {
+        border-radius: 5px;
+    }
+}
+
+.first, .second, .shown {
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+    pointer-events: none;
+}
+
+.last-two {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod;
+    }
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px rgb(196, 159, 67), 0 0 40px rgb(196, 159, 67), 0 0 50px rgb(196, 159, 67), 0 0 60px rgb(196, 159, 67), 0 0 70px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
+    }
+}
+
+.timer {
+    position: absolute;
+    top: 89vh;
+    line-height: 3vh;
+    font-size: 3vh;
+    padding: 1vh;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    color: white;
+    -webkit-filter: brightness(.5);
+    filter: brightness(.5);
+}
+
+.started {
+    color: green;
+    -webkit-filter: brightness(1.2);
+    filter: brightness(1.2);
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+#screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+dialog {
+    position: relative;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vh;
+    text-align: center;
+    font-size: 1.5vh;
+    border: none;
+    filter: blur(0);
+}

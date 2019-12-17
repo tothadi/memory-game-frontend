@@ -1,0 +1,34 @@
+<h3>Choose a theme!</h3>
+<article id="themes">
+    <img *ngFor="let theme of themes" (click)="selectTheme(theme)" class="theme" [class.active]="theme == themeclass" src="assets/image/themes/{{theme}}/1.jpg" alt={{theme}} title="Play with {{theme}} pictures!">
+</article>
+<h3>Choose grid size!</h3>
+<article id="sizes">
+    <img *ngFor="let size of sizes; let i = index" (click)="selectSize(size)" class="size" [class.active]="size == sizeclass" src="assets/image/grids/{{size}}.svg" alt="{{size}} x 5"
+        title="Click to play on level {{i+1}}!">
+</article>
+<button class="btn" [disabled]="!themeSelected || !sizeSelected" id="start" routerLink="/game" (click)="startGame()" >Start game</button>
+<article id="scores">
+    <h2>Hall of fame</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>rank</td>
+                <td>name</td>
+                <td>points</td>
+                <td>level</td>
+                <td>time</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let firstTen of firstTens; let i = index" >
+                <td>{{i+1}}</td>
+                <td>{{firstTen.username}}</td>
+                <td>{{firstTen.points}}</td>
+                <td>{{firstTen.level}}</td>
+                <td>{{firstTen.time | date:'mm:ss:SS'}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4><a routerLink="/profile">Click to see all of your results!</a></h4>
+</article>

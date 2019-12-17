@@ -1,0 +1,53 @@
+  
+<div class="navbar navbar-default">
+      <ul>
+        <li><a routerLink="/setup">New game</a></li>
+      </ul>
+      <ul>
+        <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
+        <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a></li>
+        <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
+      </ul>
+</div>
+
+<div id="container">
+
+      <h1 class="form-signin-heading">Your profile</h1>
+
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label>Full name</label>
+          <p class="form-control-static">{{ details?.fullname }}</p>
+        </div>
+        <div class="form-group">
+          <label>Username</label>
+          <p class="form-control-static">{{ details?.username }}</p>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <p class="form-control-static">{{ details?.email }}</p>
+        </div>
+      </div>
+
+      <h2>Personal results</h2>
+      <table *ngFor="let item of results; let i = index" >
+        <caption>Level {{i+1}}</caption>
+          <thead>
+              <tr>
+                  <td>rank</td>
+                  <td>time</td>
+                  <td>points</td>
+                  <td>date</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let subItem of item; let j = index" >
+                  <td>{{j+1}}</td>
+                  <td>{{subItem.time | date:'mm:ss:SS'}}</td>
+                  <td>{{subItem.points}}</td>
+                  <td>{{subItem.date | date:'yyyy.MM.dd, hh:mm:ss'}}</td>
+              </tr>
+          </tbody>
+      </table>
+      
+</div>

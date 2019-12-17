@@ -1,0 +1,107 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  background-color: goldenrod;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(50, 50, 50, .6);
+  border-radius: 5px;
+}
+
+app-root {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  max-width: 975px;
+  width: 98vw;
+}
+
+app-footer {
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  width: 70%;
+  max-width: 975px;
+  height: 3vh;
+  position: fixed;
+  top: 96vh;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+app-setup, app-game, app-save, app-results, app-home, app-register, app-login, app-profile {
+  position: relative;
+  background-color: rgba(65, 105, 225, 1);
+  border-radius: 10px;
+  top: 1vh;
+  margin-bottom: 5vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+app-game {
+  position: fixed;
+  top: 1vh;
+  left: 1vw;
+  width: 98vw;
+  height: 88vh;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+app-home, app-register, app-login {
+  position: absolute;
+  top: 1vh;
+  left: 1%;
+  width: 98%;
+  max-width: 975px;
+  height: 94%;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+app-profile {
+  position: absolute;
+  top: 10vh;
+  left: 1%;
+  align-self: center;
+  width: 98%;
+  max-width: 975px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 400px) {}

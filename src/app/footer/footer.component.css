@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+  color: gold;
+}
+
+.icons {
+  width: 2vh;
+}
+
+i {
+  font-size: 5vh;
+  text-decoration: none;
+  color: goldenrod;
+  transition: all 0.5s ease-in-out;
+  text-shadow: .2vh .2vh rgb(0, 0, 0);
+}
+
+i:hover {
+  transform: scale(1.3);
+}
+
+
+#copy-right {
+  line-height: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: goldenrod;
+}
+
+#copy-right p {
+  text-align: center;
+  letter-spacing: normal;
+  font-size: 1.5vh;
+  align-self: auto;
+  font-weight: bold;
+  margin: 0;
+}
+
+#copy-right i{
+  font-size: 1.5vh;
+  padding: 0;
+  text-shadow: .1vh .1vh rgb(0, 0, 0);
+}
