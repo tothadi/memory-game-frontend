@@ -23,10 +23,10 @@
         <tbody>
             <tr *ngFor="let firstTen of firstTens; let i = index" >
                 <td>{{i+1}}</td>
-                <td>{{firstTen.username}}</td>
-                <td>{{firstTen.points}}</td>
-                <td>{{firstTen.level}}</td>
-                <td>{{firstTen.time | date:'mm:ss:SS'}}</td>
+                <td>{{firstTen?.username}}</td>
+                <td>{{firstTen?.points}}</td>
+                <td>{{firstTen?.level}}</td>
+                <td>{{firstTen?.time | date:'mm:ss:SS'}}</td>
             </tr>
         </tbody>
     </table>

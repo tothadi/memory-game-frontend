@@ -43,9 +43,9 @@
           <tbody>
               <tr *ngFor="let subItem of item; let j = index" >
                   <td>{{j+1}}</td>
-                  <td>{{subItem.time | date:'mm:ss:SS'}}</td>
-                  <td>{{subItem.points}}</td>
-                  <td>{{subItem.date | date:'yyyy.MM.dd, hh:mm:ss'}}</td>
+                  <td>{{subItem?.time | date:'mm:ss:SS'}}</td>
+                  <td>{{subItem?.points}}</td>
+                  <td>{{subItem?.date | date:'yyyy.MM.dd, hh:mm:ss'}}</td>
               </tr>
           </tbody>
       </table>
