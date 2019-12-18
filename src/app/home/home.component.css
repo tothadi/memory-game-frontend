@@ -1,0 +1,50 @@
+#container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    margin: 0;
+    margin-bottom: 2vh;
+}
+
+img {
+    width: 20%;
+    margin-bottom: 2vh;
+}
+
+p {
+    margin-bottom: 3vh;
+}
+
+.lead {
+    text-align: center;
+    font-size: 2vh;
+    margin-bottom: 6vh;
+}
+
+a {
+    text-decoration: none;
+    color: goldenrod
+}
+
+i {
+    font-size: 5vh;
+    text-decoration: none;
+    color: goldenrod;
+    transition: all 0.5s ease-in-out;
+    text-shadow: .2vh .2vh rgb(0, 0, 0);
+}
+
+i:hover {
+    transform: scale(1.3);
+}

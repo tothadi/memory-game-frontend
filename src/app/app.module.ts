@@ -28,7 +28,7 @@ import { ResultService } from './result.service';
     ProfileComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
