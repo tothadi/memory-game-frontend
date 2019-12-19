@@ -9,7 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "proxy": "https://matchmakergame.herokuapp.com:5000",
   "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.14",
