@@ -82,10 +82,10 @@ app-game {
 
 app-profile {
   position: absolute;
-  top: 10vh;
+  top: 8vh;
   left: 1%;
   align-self: center;
-  width: 98%;
+  width: 100%;
   max-width: 975px;
   padding: 0;
   align-items: center;

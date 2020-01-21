@@ -96,7 +96,6 @@ export class SetupComponent implements OnInit {
            for (var i=0; i < 10; i++) {
             this.firstTens.push(results[i]);
            }
-      console.log(this.firstTens);
     }, (err) => {
       console.error(err);
     });

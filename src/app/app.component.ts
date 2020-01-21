@@ -19,7 +19,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {
-      if (this.location.path() === '/setup' || this.location.path() === '/result') {
+      if (this.location.path() === '/setup' || this.location.path() === '/profile') {
         this.showProfile = true;
       } else {
         this.showProfile = false;

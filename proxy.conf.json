@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "https://matchmakergame.herokuapp.com:5000",
+        "target": "localhost:5000",
         "secure": false
     }
 }

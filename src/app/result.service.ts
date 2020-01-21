@@ -39,7 +39,7 @@ export class ResultService {
   }
 
   public getTopResults(): Observable<any> {
-    return this.http.get<any>('/api/setup');
+    return this.http.get<any>('/api/topresults');
   }
 
   public getOwnResults(user: User): Observable<any> {
@@ -47,7 +47,7 @@ export class ResultService {
   }
 
   public addResult(result: Result): Observable<Result> {
-    return this.http.post<Result>('/api/game', result);
+    return this.http.post<Result>('/api/play', result);
   }
 
 }
