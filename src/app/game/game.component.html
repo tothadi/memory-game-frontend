@@ -17,5 +17,5 @@
 <div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">{{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
 
 <div *ngIf="gameEnded" id="screen">
-<dialog open>A játékot {{time}} alatt oldottad meg!</dialog>
+<dialog open>You solved the game in {{time}}!</dialog>
 </div>

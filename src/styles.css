@@ -53,7 +53,7 @@ app-footer {
   z-index: 2;
 }
 
-app-setup, app-game, app-save, app-results, app-profile, app-home, app-register, app-login, app-info {
+app-setup, app-game, app-save, app-results, app-profile, app-home, app-register, app-login, app-policy, app-notfound {
   position: relative;
   background-color: rgba(65, 105, 225, 1);
   border-radius: 10px;
@@ -81,14 +81,9 @@ app-game {
 }
 
 app-profile {
-  position: absolute;
   top: 8vh;
-  left: 1%;
   align-self: center;
-  width: 100%;
-  max-width: 975px;
   padding: 0;
-  align-items: center;
   justify-content: center;
 }
 

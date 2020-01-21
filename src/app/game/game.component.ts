@@ -72,7 +72,7 @@ export class GameComponent implements OnInit, OnDestroy {
         this.unSubscribeTimers();
         this.time = this.hours + ':' + this.minutes + ':' + this.seconds + '.' + this.milliseconds.toString();
         this.timeInMs = (parseInt(this.hours) * 3600000) + (parseInt(this.minutes) * 60000) + (parseInt(this.seconds) * 1000) + (this.milliseconds * 10);
-        this.points = Math.round((1 / this.timeInMs) * 1000000000 * (this.level / 4));
+        this.points = Math.round((1 / this.timeInMs) * 1000000000 * (Math.pow(this.level, 2) / 4));
         console.log(this.points);
         setTimeout(() => {
           this.delAllTimers();

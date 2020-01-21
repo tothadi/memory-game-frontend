@@ -18,6 +18,8 @@ import { ResponsiveModule } from 'ngx-responsive'
 import { SimpleTimer } from 'ng2-simple-timer';
 import { AppRoutingModule } from './app-routing.module';
 import { ResultService } from './result.service';
+import { PolicyComponent } from './policy/policy.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ResultService } from './result.service';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    PolicyComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
