@@ -92,4 +92,9 @@ app-profile {
     height: 6vh;
     top: 93vh;
   }
+
+  app-setup, app-game, app-save, app-results, app-profile, app-home, app-register, app-login, app-policy, app-notfound {
+    margin-bottom: 8vh;
+    padding-bottom: 7vh;
+  }
 }
