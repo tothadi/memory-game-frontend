@@ -33,7 +33,7 @@
 
 @media only screen and (orientation: portrait) {
     .four {
-        height: 16%;
+        height: 19.5%;
     }
     .six {
         height: 16%;
@@ -49,7 +49,7 @@
 
 @media only screen and (orientation: portrait) and (aspect-ratio: 1024/1366), (aspect-ratio: 768/1024) {
     .four {
-        height: 21%;
+        height: 23%;
     }
     .eight {
         height: 15.5%;
