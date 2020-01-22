@@ -1,3 +1,12 @@
+#base {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    max-width: 975px;
+    width: 98vw;
+}
+
 #profile-link {
     display: flex;
     align-items: center;
@@ -22,4 +31,46 @@ i {
 i:hover {
     transform: scale(1.3);
     color: gold;
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+#cookies {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+#cookie {
+    width: 50%;
+    text-align: justify;
+    font-size: 2vh;
+    margin-bottom: 6vh;
+    color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: goldenrod;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(218, 165, 32, .5);
 }

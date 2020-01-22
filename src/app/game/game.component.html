@@ -14,8 +14,9 @@
     }" *ngFor="let picture of pictures" src="/assets/image/{{theme}}/{{picture}}.jpg" alt="{{theme}} {{picture}}"
         (click)="showPic($event)">
 </div>
-<div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">{{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
+<div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">
+    {{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
 
 <div *ngIf="gameEnded" id="screen">
-<dialog open>You solved the game in {{time}}!</dialog>
+    <dialog open>You solved the game in {{time}}!</dialog>
 </div>

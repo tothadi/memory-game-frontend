@@ -32,7 +32,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     RegisterComponent,
     HomeComponent,
     PolicyComponent,
-    NotfoundComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,14 @@
-<a *ngIf="showProfile" [routerLink]="[ '/profile' ]" id="profile-link"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div id="base" [ngClass]="{ 'blur': !cookieAccepted }">
+    <a *ngIf="showProfile" [routerLink]="[ '/profile' ]" id="profile-link"><i class="fa fa-user-circle"
+            aria-hidden="true"></i></a>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>
+<div *ngIf="!cookieAccepted" id="cookies">
+    <p id="cookie">This website utilizes cookies for proper functionality, further development, anonym data collection
+        and
+        to further increase user experience.
+        By clicking the button below you accept our cookie policy. Fore more information, please visit our
+        <a [routerLink]="[ '/policy' ]">privacy policy page.</a></p>
+    <button (click)="acceptCookies()">Accept</button>
+</div>

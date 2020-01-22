@@ -102,6 +102,15 @@ img {
     z-index: 2;
 }
 
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod;
+    }
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px rgb(196, 159, 67), 0 0 40px rgb(196, 159, 67), 0 0 50px rgb(196, 159, 67), 0 0 60px rgb(196, 159, 67), 0 0 70px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
+    }
+}
+
 @-webkit-keyframes glow {
     from {
         box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod;

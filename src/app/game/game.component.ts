@@ -73,14 +73,12 @@ export class GameComponent implements OnInit, OnDestroy {
         this.time = this.hours + ':' + this.minutes + ':' + this.seconds + '.' + this.milliseconds.toString();
         this.timeInMs = (parseInt(this.hours) * 3600000) + (parseInt(this.minutes) * 60000) + (parseInt(this.seconds) * 1000) + (this.milliseconds * 10);
         this.points = Math.round((1 / this.timeInMs) * 1000000000 * (Math.pow(this.level, 2) / 4));
-        console.log(this.points);
         setTimeout(() => {
           this.delAllTimers();
           this.gameEnded = true;
           //send to backend
           let resultBlock: Result = { username: this.details.username, time: this.timeInMs, level: this.levelShow, date: new Date(), points: this.points };
           this.Result.addResult(resultBlock).subscribe(result => {
-            console.log(result);
           });
         }, 2000);
         setTimeout(() => {
