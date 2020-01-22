@@ -54,3 +54,9 @@ i:hover {
   top: .75vh;
   left: .75vh;
 }
+
+@media only screen and (max-width: 450px) {
+  #copy-right {
+    padding-top: 3vh;
+  }
+}
