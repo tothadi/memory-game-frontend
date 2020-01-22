@@ -1,11 +1,11 @@
 h3 {
   text-align: center;
   font-weight: bolder;
-  margin-bottom: 2vh;
+  margin-bottom: 25px;
 }
 
 article {
-  margin-bottom: 2vh;
+  margin-bottom: 30px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -49,10 +49,10 @@ article {
 }
 
 #sizes {
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: space-evenly;
+  justify-content: space-around;
 }
 
 .size {
@@ -65,9 +65,10 @@ article {
 }
 
 #start {
-  margin: 2vh;
-  height: 6vh;
-  width: 50%;
+  margin: 25px;
+  height: 80px;
+  width: 250px;
+  font-size: 20px;
   font-weight: bolder;
   align-self: center;
   background-color: goldenrod;
@@ -89,12 +90,13 @@ article {
 h2 {
   text-align: center;
   font-weight: bolder;
-  margin-bottom: 2vh;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 table {
-  width: 80%;
-  margin-bottom: 2vh;
+  width: 90%;
+  margin-bottom: 40px;
   border-collapse: collapse;
   text-align: center;
   vertical-align: middle;
@@ -116,14 +118,14 @@ tr {
 
 thead tr {
   background-color: goldenrod;
-  height: 6vh;
-  font-size: 2vh;
+  height: 3.5rem;
+  font-size: 1.8rem;
 }
 
 tbody tr {
   background-color: rgba(50, 180, 240, 1);
-  height: 4vh;
-  font-size: 1.8vh;
+  height: 2.5rem;
+  font-size: 1.5rem;
 }
 
 tbody tr:nth-child(odd) {
@@ -136,13 +138,16 @@ tbody tr:hover {
 
 td {
   width: 20%;
-  
+}
+
+h4 {
+  margin-bottom: 20px;
 }
 
 h4 a {
   color: goldenrod;
-  font-size: 1.5vh;
-  padding: 1vh;
+  font-size: 1.8rem;
+  padding: .8rem;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, .5);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
@@ -154,14 +159,4 @@ h4 a:hover {
   filter: brightness(1.5);
   color: gold;
   background-color: rgba(0, 0, 0, .3);
-}
-
-@media only screen and (orientation: landscape) and (max-height: 480px) {
-  .theme {
-    width: 30vh;
-    height: 48vh;
-  }
-  #start {
-    height: 12vh;
-  }
 }

@@ -130,7 +130,8 @@ img {
 
 .timer {
     position: fixed;
-    bottom: 5vh;
+    bottom: 7%;
+    height: 5%;
     line-height: 3vh;
     font-size: 3vh;
     padding: 1vh;
@@ -140,12 +141,6 @@ img {
     color: white;
     -webkit-filter: brightness(.5);
     filter: brightness(.5);
-}
-
-@media only screen and (max-width: 450px) {
-    .timer {
-        bottom: 8vh;
-    }
 }
 
 .started {

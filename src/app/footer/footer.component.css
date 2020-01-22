@@ -1,6 +1,18 @@
+#contact {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 a {
   text-decoration: none;
   color: gold;
+  font-size: 1.5vh;
+  font-weight: bold;
 }
 
 .icons {
@@ -41,22 +53,4 @@ i:hover {
   font-size: 1.5vh;
   padding: 0;
   text-shadow: .1vh .1vh rgb(0, 0, 0);
-}
-
-#policy {
-  position: absolute;
-  top: .75vh;
-  right: .75vh;
-}
-
-#home {
-  position: absolute;
-  top: .75vh;
-  left: .75vh;
-}
-
-@media only screen and (max-width: 450px) {
-  #copy-right {
-    padding-top: 3vh;
-  }
 }
