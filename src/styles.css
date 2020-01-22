@@ -97,4 +97,8 @@ app-profile {
     margin-bottom: 8vh;
     padding-bottom: 7vh;
   }
+
+  app-game {
+    height: 85vh;
+  }
 }

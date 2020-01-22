@@ -70,6 +70,15 @@
     }
 }
 
+@media only screen and (orientation: portrait) and (max-aspect-ratio: 414/846)  {
+    .four {
+        height: 19.5%;
+    }
+    .six {
+        width: 16%;
+    }
+}
+
 img {
     cursor: pointer;
     margin: .2%;
@@ -132,6 +141,13 @@ img {
     color: white;
     -webkit-filter: brightness(.5);
     filter: brightness(.5);
+}
+
+@media only screen and (max-width: 450px) {
+    .timer {
+        position: absolute;
+        top: 86vh;
+    }
 }
 
 .started {
