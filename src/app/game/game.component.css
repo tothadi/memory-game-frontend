@@ -10,7 +10,6 @@
 }
 
 @media only screen and (orientation: landscape) {
-    
     .four {
         height: 23.5%;
     }
@@ -25,7 +24,7 @@
     }
 }
 
-@media only screen and (orientation: landscape) and (min-aspect-ratio: 14/9)  {
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 14/9) {
     .eight {
         height: 22%;
     }
@@ -60,7 +59,7 @@
     }
 }
 
-@media only screen and (orientation: portrait) and (max-aspect-ratio: 9/18)  {
+@media only screen and (orientation: portrait) and (max-aspect-ratio: 9/18) {
     .six {
         width: 15.5%;
     }
@@ -70,7 +69,7 @@
     }
 }
 
-@media only screen and (orientation: portrait) and (max-aspect-ratio: 414/846)  {
+@media only screen and (orientation: portrait) and (max-aspect-ratio: 414/846) {
     .four {
         height: 19.5%;
     }
@@ -130,8 +129,8 @@ img {
 }
 
 .timer {
-    position: absolute;
-    top: 89vh;
+    position: fixed;
+    bottom: 5vh;
     line-height: 3vh;
     font-size: 3vh;
     padding: 1vh;
@@ -145,8 +144,7 @@ img {
 
 @media only screen and (max-width: 450px) {
     .timer {
-        position: absolute;
-        top: 86vh;
+        bottom: 8vh;
     }
 }
 
