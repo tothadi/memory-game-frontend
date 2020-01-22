@@ -42,3 +42,15 @@ i:hover {
   padding: 0;
   text-shadow: .1vh .1vh rgb(0, 0, 0);
 }
+
+#policy {
+  position: absolute;
+  top: .75vh;
+  right: .75vh;
+}
+
+#home {
+  position: absolute;
+  top: .75vh;
+  left: .75vh;
+}
