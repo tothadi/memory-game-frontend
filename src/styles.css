@@ -45,7 +45,7 @@ app-footer {
   max-width: 975px;
   height: 3vh;
   position: fixed;
-  top: 96vh;
+  bottom: 1vh;
   align-self: center;
   display: flex;
   justify-content: center;
@@ -90,7 +90,6 @@ app-profile {
 @media only screen and (max-width: 450px) {
   app-footer {
     height: 6vh;
-    top: 93vh;
   }
 
   app-setup, app-game, app-save, app-results, app-profile, app-home, app-register, app-login, app-policy, app-notfound {
