@@ -9,7 +9,6 @@ article {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-self: center;
 }
 
 #themes {
@@ -70,7 +69,6 @@ article {
   width: 250px;
   font-size: 20px;
   font-weight: bolder;
-  align-self: center;
   background-color: goldenrod;
   border: 1px outset rgba(218, 165, 32, .6);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
@@ -138,6 +136,7 @@ tbody tr:hover {
 
 td {
   width: 20%;
+  padding: .2rem;
 }
 
 h4 {
