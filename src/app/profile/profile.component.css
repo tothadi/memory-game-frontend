@@ -80,19 +80,18 @@ tr {
 }
 
 thead tr {
-  background-color: goldenrod;
-  height: 6vh;
-  font-size: 2vh;
+  height: 3.5rem;
+  font-size: 1.8rem;
 }
 
 tbody tr {
-  background-color: rgba(50, 180, 240, 1);
-  height: 4vh;
-  font-size: 1.8vh;
+  background-color: white;
+  height: 2.5rem;
+  font-size: 1.5rem;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: rgba(1, 168, 230, 1);
+  background-color: whitesmoke;
 }
 
 tbody tr:hover {
@@ -101,4 +100,5 @@ tbody tr:hover {
 
 td {
   width: 25%;
+  padding: .2rem;
 }

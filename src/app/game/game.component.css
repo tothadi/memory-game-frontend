@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    height: 100%;
+    height: 94%;
     width: 100%;
     align-self: center;
 }
@@ -81,56 +81,50 @@
 img {
     cursor: pointer;
     margin: .2%;
-    border-radius: 8px;
+    border-radius: 2px;
     background-color: goldenrod;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
-    transition: all 1s ease-in-out;
+    transition: all 300ms ease-in-out;
     object-fit: cover;
     border: none;
     filter: brightness(0);
     -webkit-filter: brightness(0);
 }
 
-@media only screen and (max-width: 900px) {
-    img {
-        border-radius: 5px;
-    }
-}
-
 .first, .second, .shown {
     filter: brightness(1);
     -webkit-filter: brightness(1);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
     pointer-events: none;
 }
 
 .last-two {
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+    -webkit-animation: glow 500ms ease-in-out infinite alternate;
+    -moz-animation: glow 500ms ease-in-out infinite alternate;
+    animation: glow 500ms ease-in-out infinite alternate;
     z-index: 2;
 }
 
 @keyframes glow {
     from {
-        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod;
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px goldenrod, 0 0 20px goldenrod, 0 0 25px goldenrod, 0 0 30px goldenrod, 0 0 35px goldenrod;
     }
     to {
-        box-shadow: 0 0 20px #fff, 0 0 30px rgb(196, 159, 67), 0 0 40px rgb(196, 159, 67), 0 0 50px rgb(196, 159, 67), 0 0 60px rgb(196, 159, 67), 0 0 70px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
+        box-shadow: 0 0 10px #fff, 0 0 15px rgb(196, 159, 67), 0 0 20px rgb(196, 159, 67), 0 0 25px rgb(196, 159, 67), 0 0 30px rgb(196, 159, 67), 0 0 35px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
     }
 }
 
 @-webkit-keyframes glow {
     from {
-        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 60px goldenrod, 0 0 70px goldenrod;
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px goldenrod, 0 0 20px goldenrod, 0 0 25px goldenrod, 0 0 30px goldenrod, 0 0 35px goldenrod;
     }
     to {
-        box-shadow: 0 0 20px #fff, 0 0 30px rgb(196, 159, 67), 0 0 40px rgb(196, 159, 67), 0 0 50px rgb(196, 159, 67), 0 0 60px rgb(196, 159, 67), 0 0 70px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
+        box-shadow: 0 0 10px #fff, 0 0 15px rgb(196, 159, 67), 0 0 20px rgb(196, 159, 67), 0 0 25px rgb(196, 159, 67), 0 0 30px rgb(196, 159, 67), 0 0 35px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
     }
 }
 
 .timer {
-    position: fixed;
-    bottom: 7%;
     height: 5%;
     line-height: 3vh;
     font-size: 3vh;

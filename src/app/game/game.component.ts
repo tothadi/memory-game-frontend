@@ -93,7 +93,7 @@ export class GameComponent implements OnInit, OnDestroy {
         $('.second').removeClass('last-two');
         $('.first').removeClass('first');
         $('.second').removeClass('second');
-      }, 1000);
+      }, 500);
     } else {
       this.showFirst = false;
       setTimeout(() => {
@@ -101,7 +101,7 @@ export class GameComponent implements OnInit, OnDestroy {
         $('.second').removeClass('shown');
         $('.first').removeClass('first');
         $('.second').removeClass('second');
-      }, 1000);
+      }, 500);
     }
   }
 
@@ -127,7 +127,7 @@ export class GameComponent implements OnInit, OnDestroy {
       $('#pictures').css('pointer-events', 'none');
       setTimeout(() => {
         $('#pictures').css('pointer-events', 'initial');
-      }, 1000);
+      }, 600);
       this.secondPic();
     }
   }

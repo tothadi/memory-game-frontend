@@ -8,9 +8,21 @@
   padding-right: 2%;
 }
 
+#footer-menu {
+  line-height: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-menu a {
+  padding-right: 3vh;
+  align-self: auto;
+}
+
 a {
   text-decoration: none;
-  color: gold;
+  color: white;
   font-size: 1.5vh;
   font-weight: bold;
 }
@@ -22,7 +34,7 @@ a {
 i {
   font-size: 5vh;
   text-decoration: none;
-  color: goldenrod;
+  color: rgb(190, 190, 190);
   transition: all 0.5s ease-in-out;
   text-shadow: .2vh .2vh rgb(0, 0, 0);
 }
@@ -37,7 +49,7 @@ i:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: goldenrod;
+  color: rgb(190, 190, 190);
 }
 
 #copy-right p {
