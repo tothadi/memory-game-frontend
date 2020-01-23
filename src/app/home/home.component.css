@@ -8,6 +8,148 @@
     width: 100%;
 }
 
+#demo {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+}
+
+#pictures {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
+    align-self: center;
+    margin-bottom: 2vh;
+}
+
+.cards {
+    cursor: pointer;
+    height: 160px;
+    width: 100px;
+    margin: 2px;
+    border-radius: 2px;
+    background-color: goldenrod;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+    transition: all 300ms ease-in-out;
+    object-fit: cover;
+    border: none;
+    filter: brightness(0);
+    -webkit-filter: brightness(0);
+}
+
+@media only screen and (max-width: 450px) {
+    #pictures {
+        width: 240px;
+    }
+    .cards {
+        height: 80px;
+        width: 50px;
+    }
+}
+
+.first, .second, .shown {
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.last-two {
+    -webkit-animation: glow 500ms ease-in-out infinite alternate;
+    -moz-animation: glow 500ms ease-in-out infinite alternate;
+    animation: glow 500ms ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px goldenrod, 0 0 20px goldenrod, 0 0 25px goldenrod, 0 0 30px goldenrod, 0 0 35px goldenrod;
+    }
+    to {
+        box-shadow: 0 0 10px #fff, 0 0 15px rgb(196, 159, 67), 0 0 20px rgb(196, 159, 67), 0 0 25px rgb(196, 159, 67), 0 0 30px rgb(196, 159, 67), 0 0 35px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
+    }
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px goldenrod, 0 0 20px goldenrod, 0 0 25px goldenrod, 0 0 30px goldenrod, 0 0 35px goldenrod;
+    }
+    to {
+        box-shadow: 0 0 10px #fff, 0 0 15px rgb(196, 159, 67), 0 0 20px rgb(196, 159, 67), 0 0 25px rgb(196, 159, 67), 0 0 30px rgb(196, 159, 67), 0 0 35px rgb(196, 159, 67), 0 0 80px rgb(196, 159, 67);
+    }
+}
+
+.timer {
+    height: 4rem;
+    line-height: 2rem;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    color: white;
+    -webkit-filter: brightness(.5);
+    filter: brightness(.5);
+}
+
+.started {
+    color: green;
+    -webkit-filter: brightness(1.2);
+    filter: brightness(1.2);
+}
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+#screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+dialog {
+    position: relative;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vh;
+    text-align: center;
+    font-size: 1.5vh;
+    border: none;
+    filter: blur(0);
+}
+
+button {
+    margin: 25px;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: whitesmoke;
+    border: 1px outset rgb(228, 228, 228);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+}
+
 h1 {
     left: 0;
     width: 100%;
@@ -15,6 +157,10 @@ h1 {
     font-size: 3vh;
     margin: 0;
     margin-bottom: 2vh;
+}
+
+h3 {
+    margin-top: 6vh;
 }
 
 img {
@@ -33,7 +179,12 @@ p {
 .lead {
     text-align: center;
     font-size: 2vh;
-    margin-bottom: 6vh;
+    margin: 0;
+}
+
+#try {
+    font-size: 2.2vh;
+    text-align: center;
 }
 
 a {
@@ -52,3 +203,55 @@ i {
 i:hover {
     transform: scale(1.3);
 }
+
+table {
+    width: 90%;
+    margin-bottom: 6vh;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+  }
+  
+  table, tr, td {
+    border: none !important;
+    vertical-align: middle;
+  }
+  
+  thead {
+    font-weight: bold;
+  }
+  
+  tr {
+    cursor: cell;
+  }
+  
+  thead tr {
+    background-color: rgba(0, 0, 0, .8);
+    color: whitesmoke;
+    height: 3.5rem;
+    font-size: 1.8rem;
+  }
+  
+  tbody tr {
+    background-color: white;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: whitesmoke;
+  }
+  
+  tbody tr:nth-child(0) {
+    background-color: goldenrod;
+  }
+  
+  tbody tr:hover {
+    filter: brightness(1.3);
+  }
+  
+  td {
+    width: 20%;
+    padding: .2rem;
+  }

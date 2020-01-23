@@ -4,9 +4,49 @@
 
   <img src="../assets/image/logo.gif" alt="logo">
 
-  <p class="lead">This is a simple matchmaker game to train your memory.<br><br>Please <a routerLink="/login">sign in</a>
-      or <a routerLink="/register">register</a> if you haven't done it already!</p>
+  <p class="lead">This is a simple matchmaker game to train your memory.<br>If you would like to try it just click on
+    any of the cards below to start the timer.</p>
 
+  <div id="demo">
+    <div id="pictures" [ngClass]="{
+      'blur': gameEnded
+  }">
+      <img draggable="false" class="cards" [ngClass]="{
+          'blur': gameEnded
+      }" *ngFor="let picture of pictures" src="/assets/image/{{theme}}/{{picture}}.jpg" alt="{{theme}} {{picture}}"
+        (click)="showPic($event)">
+    </div>
+    <div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">
+      {{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
+
+    <div *ngIf="gameEnded" id="screen">
+      <dialog open>You solved the game in {{time}}!<br>That's {{points}} points!</dialog>
+      <button (click)="closeDemo()" id="close">Close</button>
+    </div>
+  </div>
+
+  <p class="lead">Please <a routerLink="/login">sign in</a> or <a routerLink="/register">register</a> if you would like to save, track and compare your results.</p>
+  <h2>Hall of fame</h2>
+  <table>
+    <thead>
+      <tr>
+        <td>rank</td>
+        <td>name</td>
+        <td>points</td>
+        <td>level</td>
+        <td>time</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let firstTen of firstTens; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{firstTen?.username}}</td>
+        <td>{{firstTen?.points}}</td>
+        <td>{{firstTen?.level}}</td>
+        <td>{{firstTen?.time | date:'mm:ss:SS'}}</td>
+      </tr>
+    </tbody>
+  </table>
   <h3>Author details</h3>
   <h4>Name</h4>
   <p>Ádám Tóth</p>
