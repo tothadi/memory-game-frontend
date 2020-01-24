@@ -2,7 +2,7 @@
 
   <h1>Welcome!</h1>
 
-  <img src="../assets/image/logo.gif" alt="logo">
+  <img src="assets/image/logo.gif" alt="logo">
 
   <p class="lead">This is a simple matchmaker game to train your memory.<br>If you would like to try it just click on
     any of the cards below to start the timer.</p>
@@ -13,7 +13,7 @@
   }">
       <img draggable="false" class="cards" [ngClass]="{
           'blur': gameEnded
-      }" *ngFor="let picture of pictures" src="/assets/image/{{theme}}/{{picture}}.jpg" alt="{{theme}} {{picture}}"
+      }" *ngFor="let picture of pictures" src="assets/image/{{theme}}/{{picture}}.jpg" alt="{{theme}} {{picture}}"
         (click)="showPic($event)">
     </div>
     <div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">
