@@ -26,7 +26,7 @@ export class GameComponent implements OnInit, OnDestroy {
   theme: string;
   size: number;
   columns: number;
-  random = uniqueRandom(1, 30, 30);
+  random = uniqueRandom(1, 32, 32);
   firstPicId: number;
   secondPicId: number;
   showFirst = false;
@@ -261,20 +261,24 @@ export class GameComponent implements OnInit, OnDestroy {
     this.subscriptionSize = this.SettingsService.sendSize().subscribe(size$ => {
       this.level = size$;
       if (this.level === 4)
-        this.levelShow = 1;
+        this.levelShow = 1,
+          this.size = 10
       else if (this.level === 6)
-        this.levelShow = 2;
+        this.levelShow = 2,
+          this.size = 15
       else if (this.level === 8)
-        this.levelShow = 3;
+        this.levelShow = 3,
+          this.size = 24
       else
-        this.levelShow = 4;
-      this.size = (size$ * 5) / 2;
+        this.levelShow = 4,
+          this.size = 28;
+
       this.columns = size$;
     });
 
-    if (this.theme.length == 0) 
+    if (this.theme.length == 0)
       this.router.navigate(['/setup']);
-    
+
 
     for (var i = 1; i <= this.size; i++) {
       this.pictures.push(this.random());
