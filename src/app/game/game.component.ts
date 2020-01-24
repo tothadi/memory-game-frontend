@@ -26,7 +26,7 @@ export class GameComponent implements OnInit, OnDestroy {
   theme: string;
   size: number;
   columns: number;
-  random = uniqueRandom(1, 32, 32);
+  random = uniqueRandom(1, 30, 30);
   firstPicId: number;
   secondPicId: number;
   showFirst = false;
