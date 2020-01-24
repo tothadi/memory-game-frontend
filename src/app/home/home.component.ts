@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   firstTens = [];
   pictures = [];
-  theme = 'dogs';
+  theme = 'nature';
   size = 6;
   random = uniqueRandom(1, 30, 30);
   firstPicId: number;

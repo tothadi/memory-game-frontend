@@ -60,8 +60,8 @@
 .first, .second, .shown {
     filter: brightness(1);
     -webkit-filter: brightness(1);
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
     pointer-events: none;
 }
 
