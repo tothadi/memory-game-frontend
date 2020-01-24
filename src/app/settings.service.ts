@@ -7,7 +7,7 @@ import * as Rx from "rxjs";
 
 export class SettingsService {
 
-  public theme$ = new Rx.BehaviorSubject('dogs');
+  public theme$ = new Rx.BehaviorSubject('nature');
   public size$ = new Rx.BehaviorSubject(4);
 
   constructor() {
