@@ -24,7 +24,7 @@ export class LoginComponent {
     this.auth.login(this.credentials).subscribe(() => {
       this.router.navigateByUrl('/setup');
     }, (err) => {
-      console.log(err.message);
+      console.log(err);
       //this.loginError = true;
       //this.errorMessage = err.message;
     });
