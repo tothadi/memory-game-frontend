@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { AuthenticationService, TokenPayload } from '../authentication.service';
 import * as uniqueRandom from 'unique-random-at-depth';
 import * as $ from 'jquery';
 import { SimpleTimer } from 'ng2-simple-timer';
 import { ResultService } from '../result.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +13,20 @@ import { ResultService } from '../result.service';
 })
 export class HomeComponent implements OnInit {
 
+  credentials: TokenPayload = {
+    email: '',
+    username: '',
+    fullname: '',
+    password: ''
+  };
+
+  regError = false;
+  errorMessage = '';
+
   firstTens = [];
   pictures = [];
   theme = 'nature';
-  size = 6;
+  size = 10;
   random = uniqueRandom(1, 30, 30);
   firstPicId: number;
   secondPicId: number;
@@ -48,7 +58,7 @@ export class HomeComponent implements OnInit {
   timerHourId: string;
   timerHourName: string = '1 hour'
 
-  constructor(private timer: SimpleTimer, private ResultService: ResultService) {
+  constructor(private auth: AuthenticationService, private router: Router, private timer: SimpleTimer, private ResultService: ResultService) {
 
   }
 
@@ -89,6 +99,20 @@ export class HomeComponent implements OnInit {
 
     this.pictures.sort(function (a, b) { return 0.5 - Math.random() });
 
+  }
+
+  register() {
+    this.auth.register(this.credentials).subscribe(() => {
+      this.router.navigateByUrl('/setup');
+    }, (err) => {
+      this.errorMessage = err.error.message;
+      this.regError = true;
+    });
+  }
+
+  closeError() {
+    this.errorMessage = '';
+    this.regError = false;
   }
 
   closeDemo() {

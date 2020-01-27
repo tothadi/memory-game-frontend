@@ -19,13 +19,63 @@
     <div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">
       {{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
 
-    <div *ngIf="gameEnded" id="screen">
+    <div *ngIf="gameEnded && !regError" id="screen">
       <dialog open>You solved the game in {{time}}!<br>That's {{points}} points!</dialog>
+      <p class="lead">If you would like to save this result, please register with the form below.</p>
+      <form (submit)="register()">
+
+        <div class="form-group">
+          <label for="fullname">Full name</label>
+          <input type="text" class="form-control" name="fullname" placeholder="Enter your name" required minlength="3"
+            [(ngModel)]="credentials.fullname" #fullnameInput="ngModel">
+          <div class="help error" *ngIf="fullnameInput.invalid && fullnameInput.dirty">
+            Full name must be at least 3 characters long!
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" name="username" placeholder="Enter your desired username" required
+            minlength="3" [(ngModel)]="credentials.username" #usernameInput="ngModel">
+          <div class="help error" *ngIf="usernameInput.invalid && usernameInput.dirty">
+            Full name must be at least 3 characters long!
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter your email address" required email
+            [(ngModel)]="credentials.email" #emailInput="ngModel">
+          <div class="help error" *ngIf="emailInput.invalid && emailInput.dirty">
+            Please provide a real email address!
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Password" required minlength="8"
+            [(ngModel)]="credentials.password" #passwordInput="ngModel">
+          <div class="help error" *ngIf="passwordInput.invalid && passwordInput.dirty">
+            The password must be at least 8 characters long.
+          </div>
+        </div>
+
+        <button id="reg" type="submit" class="btn btn-default"
+          [disabled]="fullnameInput.invalid || usernameInput.invalid || emailInput.invalid || passwordInput.invalid">Register!</button>
+
+      </form>
+
       <button (click)="closeDemo()" id="close">Close</button>
+    </div>
+
+    <div *ngIf="regError" id="errorScreen">
+      <dialog id="errorDialog" open>{{errorMessage}}</dialog>
+      <button (click)="closeError()" id="close">Try again</button>
     </div>
   </div>
 
-  <p class="lead">Please <a routerLink="/login">sign in</a> or <a routerLink="/register">register</a> if you would like to save, track and compare your results.</p>
+  <p class="lead">Please <a routerLink="/login">sign in</a> or <a routerLink="/register">register</a> if you would like
+    to save, track and compare your results.</p>
   <h2>Hall of fame</h2>
   <table>
     <thead>

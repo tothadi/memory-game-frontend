@@ -141,7 +141,49 @@ dialog {
     filter: blur(0);
 }
 
-button {
+form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    align-self: center;
+    font-size: 1.4vh;
+    margin: auto;
+    margin-bottom: 4vh;
+}
+
+.form-group {
+    align-self: center;
+    width: 50%;
+    margin-bottom: 4vh;
+}
+
+label, select, input {
+    width: 100%;
+    font-size: 1.4vh;
+}
+
+label {
+    text-align: center;
+}
+
+select, input {
+    height: 4vh;
+}
+
+#reg {
+    align-self: center;
+    padding: .75vh;
+    height: 3vh;
+    line-height: 1.5vh;
+    font-size: 1.5vh;
+}
+
+#errorDialog {
+    background-color: red;
+}
+
+#close {
     font-size: 1.8rem;
     font-weight: bolder;
     background-color: whitesmoke;
@@ -210,47 +252,47 @@ table {
     text-align: center;
     vertical-align: middle;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
-  }
-  
-  table, tr, td {
+}
+
+table, tr, td {
     border: none !important;
     vertical-align: middle;
-  }
-  
-  thead {
+}
+
+thead {
     font-weight: bold;
-  }
-  
-  tr {
+}
+
+tr {
     cursor: cell;
-  }
-  
-  thead tr {
+}
+
+thead tr {
     background-color: rgba(0, 0, 0, .8);
     color: whitesmoke;
     height: 3.5rem;
     font-size: 1.8rem;
-  }
-  
-  tbody tr {
+}
+
+tbody tr {
     background-color: white;
     height: 2.5rem;
     font-size: 1.5rem;
-  }
-  
-  tbody tr:nth-child(odd) {
+}
+
+tbody tr:nth-child(odd) {
     background-color: whitesmoke;
-  }
-  
-  tbody tr:nth-child(0) {
+}
+
+tbody tr:nth-child(0) {
     background-color: goldenrod;
-  }
-  
-  tbody tr:hover {
+}
+
+tbody tr:hover {
     filter: brightness(1.3);
-  }
-  
-  td {
+}
+
+td {
     width: 20%;
     padding: .2rem;
-  }
+}
