@@ -133,7 +133,7 @@ export class HomeComponent implements OnInit {
         this.unSubscribeTimers();
         this.time = this.hours + ':' + this.minutes + ':' + this.seconds + '.' + this.milliseconds.toString();
         this.timeInMs = (parseInt(this.hours) * 3600000) + (parseInt(this.minutes) * 60000) + (parseInt(this.seconds) * 1000) + (this.milliseconds * 10);
-        this.points = Math.round((1 / this.timeInMs) * 1000000000 * 2);
+        this.points = Math.round((1 / this.timeInMs) * 1000000000 * 4);
         setTimeout(() => {
           this.delAllTimers();
           this.gameEnded = true;
