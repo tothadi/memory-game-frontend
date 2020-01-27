@@ -24,7 +24,7 @@ export class RegisterComponent {
     this.auth.register(this.credentials).subscribe(() => {
       this.router.navigateByUrl('/setup');
     }, (err) => {
-      this.errorMessage = err.message;
+      this.errorMessage = err.error.message;
       this.regError = true;
     });
   }

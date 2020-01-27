@@ -92,6 +92,7 @@ dialog {
     font-size: 1.5vh;
     border: none;
     filter: blur(0);
+    background-color: red;
 }
 
 #close {
