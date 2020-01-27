@@ -178,7 +178,13 @@ select, input {
     padding: .75vh;
     height: 3vh;
     line-height: 1.5vh;
-    font-size: 1.5vh;
+    background-color: rgba(0, 230, 0, .4);
+    color: whitesmoke;
+}
+
+#reg:disabled {
+    background-color: rgba(0, 0, 0, .4);
+    color: rgba(255, 0, 0, .6);
 }
 
 #errorDialog {

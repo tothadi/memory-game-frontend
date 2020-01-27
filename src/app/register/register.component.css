@@ -23,7 +23,7 @@ h1 {
     margin-bottom: 6vh;
 }
 
-.lead a{
+.lead a {
     text-decoration: none;
     color: goldenrod
 }
@@ -58,13 +58,18 @@ select, input {
     height: 4vh;
 }
 
-
-button {
+#reg {
     align-self: center;
     padding: .75vh;
     height: 3vh;
     line-height: 1.5vh;
     font-size: 1.5vh;
+    background-color: rgba(0, 230, 0, .4);
+}
+
+#reg:disabled {
+    background-color: rgba(0, 0, 0, .4);
+    color: rgba(255, 0, 0, .6);
 }
 
 #screen {
