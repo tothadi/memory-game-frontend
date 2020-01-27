@@ -1,7 +1,7 @@
 h3 {
   text-align: center;
   font-weight: bolder;
-  margin-bottom: 25px;
+  margin-bottom: 2rem;
 }
 
 article {
@@ -17,6 +17,7 @@ article {
   align-items: center;
   justify-content: center;
   width: 95%;
+  margin-bottom: 4rem;
 }
 
 .theme {
@@ -49,6 +50,7 @@ article {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 6rem;
 }
 
 .size {
@@ -75,10 +77,10 @@ article {
 }
 
 #start {
-  margin: 25px;
-  height: 80px;
-  width: 250px;
-  font-size: 20px;
+  margin-bottom: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
   background-color: whitesmoke;
   border: 1px outset rgba(0, 230, 0, .6);
@@ -105,13 +107,13 @@ article {
 h2 {
   text-align: center;
   font-weight: bolder;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 table {
   width: 90%;
-  margin-bottom: 40px;
+  margin-bottom: 6rem;
   border-collapse: collapse;
   text-align: center;
   vertical-align: middle;
@@ -162,7 +164,7 @@ td {
 }
 
 h4 {
-  margin-bottom: 20px;
+  margin-bottom: 6rem;
 }
 
 h4 a {

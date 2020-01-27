@@ -15,8 +15,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 3vh;
-    margin-bottom: 6vh;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 #pictures {
@@ -27,7 +27,7 @@
     align-content: center;
     width: 500px;
     align-self: center;
-    margin-bottom: 2vh;
+    margin-bottom: 2rem;
 }
 
 .cards {
@@ -134,9 +134,9 @@
     right: initial;
     display: flex;
     justify-content: center;
-    padding: 1.5vh;
+    padding: 2rem;
     text-align: center;
-    font-size: 1.5vh;
+    font-size: 2rem;
     border: none;
 }
 
@@ -149,19 +149,19 @@ form {
     flex-direction: column;
     width: 75%;
     align-items: center;
-    font-size: 1.4vh;
-    margin-bottom: 4vh;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 .form-group {
     align-self: center;
     width: 50%;
-    margin-bottom: 4vh;
+    margin-bottom: 4rem;
 }
 
 label, select, input {
     width: 100%;
-    font-size: 1.4vh;
+    font-size: 1.5rem;
 }
 
 label {
@@ -170,21 +170,22 @@ label {
 }
 
 select, input {
-    height: 4vh;
+    height: 3rem;
 }
 
 #reg {
     align-self: center;
-    padding: .75vh;
-    height: 3vh;
-    line-height: 1.5vh;
+    padding: 1rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    border-color: rgba(0, 230, 0, .5);
     background-color: rgba(0, 230, 0, .4);
     color: whitesmoke;
 }
 
 #reg:disabled {
-    background-color: rgba(0, 0, 0, .4);
-    color: rgba(255, 0, 0, .6);
+    border-color: rgba(255, 0, 0, .6);
+    background-color: rgba(255, 0, 0, .4);
 }
 
 #errorDialog {
@@ -192,7 +193,7 @@ select, input {
 }
 
 #close {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bolder;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -205,22 +206,27 @@ h1 {
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 3rem;
     margin: 0;
-    margin-bottom: 2vh;
+    margin-bottom: 4rem;
+}
+
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 h3 {
-    margin-top: 6vh;
+    margin-top: 4rem;
 }
 
 img {
     width: 20%;
-    margin-bottom: 2vh;
+    margin-bottom: 4rem;
 }
 
 p {
-    margin-bottom: 3vh;
+    margin-bottom: 3rem;
 }
 
 #cookie {
@@ -229,14 +235,10 @@ p {
 
 .lead {
     text-align: center;
-    font-size: 2vh;
+    font-size: 2rem;
     margin: 0;
 }
 
-#try {
-    font-size: 2.2vh;
-    text-align: center;
-}
 
 a {
     text-decoration: none;
@@ -257,7 +259,7 @@ i:hover {
 
 table {
     width: 90%;
-    margin-bottom: 6vh;
+    margin-bottom: 4rem;
     border-collapse: collapse;
     text-align: center;
     vertical-align: middle;

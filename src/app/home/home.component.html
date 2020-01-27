@@ -65,12 +65,12 @@
 
       </form>
 
-      <button (click)="closeDemo()" id="close">Close</button>
+      <button (click)="closeDemo()" id="close" class="btn btn-default">Close</button>
     </div>
 
     <div *ngIf="regError" id="errorScreen">
       <dialog id="errorDialog" open>{{errorMessage}}</dialog>
-      <button (click)="closeError()" id="close">Try again</button>
+      <button (click)="closeError()" id="close" class="btn btn-default">Try again</button>
     </div>
   </div>
 

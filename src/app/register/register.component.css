@@ -12,15 +12,15 @@ h1 {
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 3rem;
     margin: 0;
-    margin-bottom: 6vh;
+    margin-bottom: 4rem;
 }
 
 .lead {
     text-align: center;
-    font-size: 2vh;
-    margin-bottom: 6vh;
+    font-size: 2rem;
+    margin-bottom: 4rem;
 }
 
 .lead a {
@@ -34,20 +34,20 @@ form {
     width: 75%;
     align-items: center;
     align-self: center;
-    font-size: 1.4vh;
+    font-size: 1.5rem;
     margin: auto;
-    margin-bottom: 4vh;
+    margin-bottom: 4rem;
 }
 
 .form-group {
     align-self: center;
     width: 50%;
-    margin-bottom: 4vh;
+    margin-bottom: 2rem;
 }
 
 label, select, input {
     width: 100%;
-    font-size: 1.4vh;
+    font-size: 1.5rem;
 }
 
 label {
@@ -55,21 +55,22 @@ label {
 }
 
 select, input {
-    height: 4vh;
+    height: 3rem;
 }
 
 #reg {
     align-self: center;
-    padding: .75vh;
-    height: 3vh;
-    line-height: 1.5vh;
-    font-size: 1.5vh;
+    padding: 1rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    border-color: rgba(0, 230, 0, .5);
     background-color: rgba(0, 230, 0, .4);
+    color: black;
 }
 
 #reg:disabled {
-    background-color: rgba(0, 0, 0, .4);
-    color: rgba(255, 0, 0, .6);
+    border-color: rgba(255, 0, 0, .6);
+    background-color: rgba(255, 0, 0, .4);
 }
 
 #screen {
@@ -92,9 +93,9 @@ dialog {
     align-self: center;
     align-items: center;
     justify-content: center;
-    padding: 1.5vh;
+    padding: 2rem;
     text-align: center;
-    font-size: 1.5vh;
+    font-size: 2rem;
     border: none;
     filter: blur(0);
     background-color: red;
@@ -102,7 +103,9 @@ dialog {
 
 #close {
     margin: 25px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     font-weight: bolder;
     background-color: whitesmoke;
     border: 1px outset rgb(228, 228, 228);
