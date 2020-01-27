@@ -22,13 +22,12 @@ export class LoginComponent {
 
   login() {
     this.auth.login(this.credentials).subscribe(() => {
-
+      this.router.navigateByUrl('/setup');
     }, (err) => {
-      this.loginError = true;
-      this.errorMessage = err.message;
+      console.log(err.message);
+      //this.loginError = true;
+      //this.errorMessage = err.message;
     });
-
-    this.router.navigateByUrl('/setup');
   }
 
   closeError() {
