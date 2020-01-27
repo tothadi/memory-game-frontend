@@ -45,5 +45,10 @@
       </form>
 
       <p class="lead">By clicking the register button you accept our <a routerLink="/policy">privacy policy</a>.</p>
+
+      <div *ngIf="regError" id="screen">
+        <dialog open>{{errorMessage}}</dialog>
+        <button (click)="closeError()" id="close">Try again</button>
+      </div>
  
 </div>
