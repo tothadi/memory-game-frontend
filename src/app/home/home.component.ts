@@ -102,10 +102,10 @@ export class HomeComponent implements OnInit {
   }
 
   register() {
+    let resultBlock: Result = { username: this.credentials.username, time: this.timeInMs, level: 1, date: new Date(), points: this.points };
+    this.ResultService.addResult(resultBlock).subscribe(result => {
+    });
     this.auth.register(this.credentials).subscribe(() => {
-      let resultBlock: Result = { username: this.credentials.username, time: this.timeInMs, level: 1, date: new Date(), points: this.points };
-      this.ResultService.addResult(resultBlock).subscribe(result => {
-      });
       this.router.navigateByUrl('/setup');
     }, (err) => {
       this.errorMessage = err.error.message;

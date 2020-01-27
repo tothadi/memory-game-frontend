@@ -188,6 +188,21 @@ select, input {
     background-color: rgba(255, 0, 0, .4);
 }
 
+#errorScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+
 #errorDialog {
     background-color: red;
 }
