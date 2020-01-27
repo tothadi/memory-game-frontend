@@ -3,7 +3,7 @@ import { AuthenticationService, TokenPayload } from '../authentication.service';
 import * as uniqueRandom from 'unique-random-at-depth';
 import * as $ from 'jquery';
 import { SimpleTimer } from 'ng2-simple-timer';
-import { ResultService } from '../result.service';
+import { ResultService, Result } from '../result.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -102,6 +102,9 @@ export class HomeComponent implements OnInit {
   }
 
   register() {
+    let resultBlock: Result = { username: this.credentials.username, time: this.timeInMs, level: 1, date: new Date(), points: this.points };
+    this.ResultService.addResult(resultBlock).subscribe(result => {
+    });
     this.auth.register(this.credentials).subscribe(() => {
       this.router.navigateByUrl('/setup');
     }, (err) => {
@@ -109,6 +112,8 @@ export class HomeComponent implements OnInit {
       this.regError = true;
     });
   }
+
+
 
   closeError() {
     this.errorMessage = '';
@@ -297,13 +302,13 @@ export class HomeComponent implements OnInit {
 
     this.ResultService.getTopResults().subscribe(result => {
       let results = JSON.parse(result);
-           for (var i=0; i < 10; i++) {
-            this.firstTens.push(results[i]);
-           }
+      for (var i = 0; i < 10; i++) {
+        this.firstTens.push(results[i]);
+      }
     }, (err) => {
       console.error(err);
     });
-    
+
   }
 
 }

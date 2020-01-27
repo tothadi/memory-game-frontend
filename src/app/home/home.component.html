@@ -20,8 +20,8 @@
       {{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
 
     <div *ngIf="gameEnded && !regError" id="screen">
-      <dialog open>You solved the game in {{time}}!<br>That's {{points}} points!</dialog>
-      <p class="lead">If you would like to save this result, please register with the form below.</p>
+      <dialog id="result" open>You solved the game in {{time}}!<br>That's {{points}} points!</dialog>
+      <p id="wannaReg" class="lead">If you would like to save this result, please register with the form below.</p>
       <form (submit)="register()">
 
         <div class="form-group">
