@@ -155,7 +155,6 @@ form {
 
 .form-group {
     align-self: center;
-    width: 50%;
     margin-bottom: 4rem;
 }
 
@@ -196,14 +195,24 @@ select, input {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 4;
     background-color: rgba(0, 0, 0, .8);
 }
 
 
 #errorDialog {
+    position: initial;
+    left: initial;
+    right: initial;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    border: none;
+    margin-bottom: 4rem;
     background-color: red;
 }
 
