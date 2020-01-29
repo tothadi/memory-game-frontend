@@ -19,8 +19,11 @@
     <div *ngIf="!gameEnded" [ngClass]="{'started': gameEnded || !firstClick}" class="timer">
       {{hours}}:{{minutes}}:{{seconds}}.{{milliseconds}}</div>
 
-    <div *ngIf="gameEnded && !regError" id="screen">
-      <dialog id="result" open>You solved the game in {{time}}!<br>That's {{points}} points!</dialog>
+    <div *ngIf="!gameEnded && !regError" id="screen">
+      <dialog id="result">
+        <p>You solved the game in <span>{{time}}</span>!</p>
+        <p>That's <span>{{points}}</span> points!</p>
+      </dialog>
       <p id="wannaReg" class="lead">If you would like to save this result, please register with the form below.</p>
       <form (submit)="register()">
 
