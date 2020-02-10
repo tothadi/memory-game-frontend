@@ -1,7 +1,6 @@
 #base {
     position: absolute;
     display: flex;
-    justify-content: center;
     max-width: 975px;
     height: 100%;
     width: 100%;
