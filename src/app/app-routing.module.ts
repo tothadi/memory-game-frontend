@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'policy', component: PolicyComponent },
   { path: 'game', component: GameComponent, canActivate: [AuthGuardService] },
-  { path: 'setup', component: SetupComponent, },
+  { path: 'setup', component: SetupComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
