@@ -13,7 +13,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'policy', component: PolicyComponent },
-  { path: 'game', component: GameComponent, canActivate: [AuthGuardService] },
+  { path: 'game', component: GameComponent,  },
   { path: 'setup', component: SetupComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
