@@ -1,5 +1,6 @@
 #base {
     display: flex;
+    flex-direction: column;
     max-width: 975px;
     height: 100%;
     width: 100%;
