@@ -14,10 +14,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'policy', component: PolicyComponent },
   { path: 'game', component: GameComponent,  },
-  { path: 'setup', component: SetupComponent, canActivate: [AuthGuardService] },
+  { path: 'setup', component: SetupComponent,},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
+  { path: 'profile', component: ProfileComponent,  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent }
 ];
