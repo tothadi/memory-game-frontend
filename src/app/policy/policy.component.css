@@ -1,8 +1,6 @@
 #container {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     max-width: 600px;
     width: 100%;
