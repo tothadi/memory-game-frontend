@@ -37,16 +37,28 @@ body {
 }
 
 app-root {
+  position: absolute; 
   display: flex;
+  flex-direction: column;
   height: 99%;
   width: 98%;
   max-width: 975px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
 }
 
-app-footer {
+.blur {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+app-menu {
   position: absolute;
-  bottom: 1%;
+  top: 2%;
+  left: 2%;
+}
+
+app-footer {
+  order: 2;
   background-color: rgba(0, 0, 0, .8);
   /*border-radius: 5px;*/
   width: 100%;
@@ -60,7 +72,7 @@ app-footer {
 }
 
 app-setup, app-game, app-save, app-results, app-profile, app-home, app-register, app-login, app-policy, app-notfound {
-  position: absolute;
+  order: 1;
   background-color: steelblue;
   /*border-radius: 10px;*/
   padding-top: 40px;
@@ -69,7 +81,7 @@ app-setup, app-game, app-save, app-results, app-profile, app-home, app-register,
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 93%;
+  height: 94%;
   overflow-y: scroll;
 }
 
@@ -82,6 +94,4 @@ app-profile {
   padding-top: 12%;
 }
 
-@media only screen and (max-width: 450px) {
-  
-}
+@media only screen and (max-width: 450px) {}

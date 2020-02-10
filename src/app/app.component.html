@@ -1,9 +1,7 @@
-<div id="base" [ngClass]="{ 'blur': !cookieAccepted }">
-    <a *ngIf="showProfile" [routerLink]="[ '/profile' ]" id="profile-link"><i class="fa fa-user-circle"
-            aria-hidden="true"></i></a>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-</div>
+<app-menu *ngIf="showProfile"></app-menu>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
 <div *ngIf="!cookieAccepted" id="cookies">
     <p id="cookie">This website utilizes cookies for proper functionality, further development, anonym data collection
         and

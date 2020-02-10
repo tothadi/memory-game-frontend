@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ResultService } from './result.service';
 import { PolicyComponent } from './policy/policy.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     RegisterComponent,
     HomeComponent,
     PolicyComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

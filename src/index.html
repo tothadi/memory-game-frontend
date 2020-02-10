@@ -18,7 +18,9 @@
 </head>
 
 <body>
-  <app-root></app-root>
+  
+  <app-root [ngClass]="{ 'blur': !cookieAccepted }">
+  </app-root>
   <script>
     if (global === undefined) {
       var global = window;
