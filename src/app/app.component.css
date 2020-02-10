@@ -1,4 +1,5 @@
 #base {
+    position: absolute;
     display: flex;
     flex-direction: column;
     max-width: 975px;
@@ -8,7 +9,6 @@
 
 #profile-link {
     display: flex;
-    align-items: center;
     text-align: center;
     position: absolute;
     top: 2%;
