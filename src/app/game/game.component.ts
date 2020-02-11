@@ -46,19 +46,13 @@ export class GameComponent implements OnInit, OnDestroy {
 
   CounterSec = 0;
   seconds = '00';
-  timerSecId: string;
-  timerSecName: string = '1 sec'
-
+  
   CounterMin = 0;
   minutes = '00';
-  timerMinId: string;
-  timerMinName: string = '1 minute'
-
+  
   CounterHour = 0;
   hours = '00';
-  timerHourId: string;
-  timerHourName: string = '1 hour'
-
+  
   constructor(private SettingsService: SettingsService, private auth: AuthenticationService, private timer: SimpleTimer, private router: Router, private Result: ResultService) {
 
   }
@@ -134,23 +128,14 @@ export class GameComponent implements OnInit, OnDestroy {
 
   subscribeTimers() {
     this.subscribeTimerMs();
-    this.subscribeTimerSec();
-    this.subscribeTimerMin();
-    this.subscribeTimerHour();
   }
 
   unSubscribeTimers() {
     this.timer.unsubscribe(this.timerMsId);
-    this.timer.unsubscribe(this.timerSecId);
-    this.timer.unsubscribe(this.timerMinId);
-    this.timer.unsubscribe(this.timerHourId);
   }
 
   delAllTimers() {
     this.timer.delTimer(this.timerMsName);
-    this.timer.delTimer(this.timerSecName);
-    this.timer.delTimer(this.timerMinName);
-    this.timer.delTimer(this.timerHourName);
     this.milliseconds = 0;
     this.seconds = '00';
     this.minutes = '00';
@@ -168,78 +153,42 @@ export class GameComponent implements OnInit, OnDestroy {
     }
   }
 
-  subscribeTimerSec() {
-    if (this.timerSecId) {
-      // Unsubscribe if timer Id is defined
-      this.timer.unsubscribe(this.timerSecId);
-      this.timerSecId = undefined;
-    } else {
-      // Subscribe if timer Id is undefined
-      this.timerSecId = this.timer.subscribe(this.timerSecName, () => this.timerSecCallback());
-    }
-  }
-
-  subscribeTimerMin() {
-    if (this.timerMinId) {
-      // Unsubscribe if timer Id is defined
-      this.timer.unsubscribe(this.timerMinId);
-      this.timerMinId = undefined;
-    } else {
-      // Subscribe if timer Id is undefined
-      this.timerMinId = this.timer.subscribe(this.timerMinName, () => this.timerMinCallback());
-    }
-  }
-
-  subscribeTimerHour() {
-    if (this.timerHourId) {
-      // Unsubscribe if timer Id is defined
-      this.timer.unsubscribe(this.timerHourId);
-      this.timerHourId = undefined;
-    } else {
-      // Subscribe if timer Id is undefined
-      this.timerHourId = this.timer.subscribe(this.timerHourName, () => this.timerHourCallback());
-    }
-  }
-
   timerMsCallback(): void {
     this.CounterMs++;
     if (this.CounterMs === 100) {
       this.CounterMs = 0;
+      this.CounterSec++;
     }
-    this.milliseconds = this.CounterMs;
-  }
-
-  timerSecCallback(): void {
-    this.CounterSec++;
     if (this.CounterSec === 60) {
       this.CounterSec = 0;
+      this.CounterMin++;
     }
-    if (this.CounterSec < 10) {
-      this.seconds = '0' + this.CounterSec;
-    } else {
-      this.seconds = this.CounterSec.toString();
-    }
-  }
-
-  timerMinCallback(): void {
-    this.CounterMin++;
     if (this.CounterMin === 60) {
       this.CounterMin = 0;
+      this.CounterHour++;
     }
-    if (this.CounterMin < 10) {
-      this.minutes = '0' + this.CounterMin;
-    } else {
-      this.minutes = this.CounterMin.toString();
+    if (this.CounterSec === 60){
+      this.CounterSec = 0;
+      this.CounterSec++;
     }
-  }
+    
+    this.milliseconds = this.CounterMs;
 
-  timerHourCallback(): void {
-    this.CounterHour++;
-    if (this.CounterHour < 10) {
+    if (this.CounterSec < 10) 
+      this.seconds = '0' + this.CounterSec;
+    else
+      this.seconds = this.CounterSec.toString();
+    
+    if (this.CounterMin < 10) 
+      this.minutes = '0' + this.CounterMin;
+    else
+      this.minutes = this.CounterMin.toString();
+    
+    if (this.CounterHour < 10) 
       this.hours = '0' + this.CounterHour;
-    } else {
+    else
       this.hours = this.CounterHour.toString();
-    }
+    
   }
 
   ngOnInit() {
@@ -251,9 +200,6 @@ export class GameComponent implements OnInit, OnDestroy {
     });
 
     this.timer.newTimerHR(this.timerMsName, 10, 10);
-    this.timer.newTimer(this.timerSecName, 1, true);
-    this.timer.newTimer(this.timerMinName, 60, true);
-    this.timer.newTimer(this.timerHourName, 3600, true);
 
     this.subscriptionTheme = this.SettingsService.sendTheme().subscribe(theme$ => {
       this.theme = theme$;
