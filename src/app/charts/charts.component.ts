@@ -41,11 +41,13 @@ export class ChartsComponent implements OnInit {
     title: {
       display: true,
       text: 'Performance Chart',
-      fontColor: 'whitesmoke'
+      fontColor: 'whitesmoke',
+      fontSize: 16
     },
     legend: {
       labels: {
-        fontColor: "whitesmoke"
+        fontColor: "whitesmoke",
+        fontSize: 12
     }
     },
     animation: {
@@ -65,11 +67,14 @@ export class ChartsComponent implements OnInit {
         distribution: 'linear',
         scaleLabel: {
           display: true,
-          labelString: 'Date'
+          labelString: 'date',
+          fontColor: 'whitesmoke',
+          fontSize: 12
         },
         ticks: {
           source: 'auto',
-          fontColor: 'whitesmoke'
+          fontColor: 'whitesmoke',
+          fontSize: 10
         }
       }],
       yAxes: [{
@@ -77,10 +82,13 @@ export class ChartsComponent implements OnInit {
         display: true,
         scaleLabel: {
           display: true,
-          labelString: 'points'
+          labelString: 'points',
+          fontColor: 'whitesmoke',
+          fontSize: 12
         },
         ticks: {
-          fontColor: 'whitesmoke'
+          fontColor: 'whitesmoke',
+          fontSize: 10
         }
       }]
     },
