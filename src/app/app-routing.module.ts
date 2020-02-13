@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthGuardService } from './auth-guard.service';
 import { PolicyComponent } from './policy/policy.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },

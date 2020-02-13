@@ -54,7 +54,7 @@ export class SetupComponent implements OnInit {
         4,
         6
       ];
-    } else if (this.innerWidth < 950 || this.innerHeight < 900) {
+    } else if (this.innerWidth < 850 || this.innerHeight < 900) {
       this.sizes = [
         4,
         6,

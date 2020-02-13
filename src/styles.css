@@ -91,7 +91,13 @@ app-game {
 }
 
 app-profile {
-  padding-top: 12%;
+  padding-top: 8%;
+}
+
+app-charts {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 @media only screen and (max-width: 450px) {}
