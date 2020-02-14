@@ -32,11 +32,7 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/moment/src/moment.js",
-              "node_modules/chart.js/src/chart.js",
-              "node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js",
-              "node_modules/hammerjs/hammer.min.js",
-              "node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.js"
+              
             ]
           },
           "configurations": {
@@ -104,11 +100,7 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/moment/src/moment.js",
-              "node_modules/chart.js/src/chart.js",
-              "node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js",
-              "node_modules/hammerjs/hammer.min.js",
-              "node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.js"
+              
             ]
           }
         },

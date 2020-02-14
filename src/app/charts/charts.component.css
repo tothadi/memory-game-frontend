@@ -1,7 +1,14 @@
-#level1 {
-    display: flex;
+#cont {
+    position: relative;
     background-color: rgba(0, 0, 0, .8);
     color: whitesmoke;
-    width: 100%;
     padding: 10px;
+    height: 50vh;
+    width: 100%;
+}
+
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
