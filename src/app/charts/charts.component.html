@@ -1,4 +1,7 @@
 <div id="cont" *ngIf="chart">
-    <canvas #canvas id="canvas" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">{{chart}}
+    <canvas #canvas id="canvas">{{chart}}
     </canvas>
+    <button id="reset" class="btn btn-default" (click)="resetZoom()">
+        Reset zoom
+     </button>
 </div>

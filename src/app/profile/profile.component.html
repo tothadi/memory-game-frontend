@@ -5,7 +5,7 @@
       </ul>
       <ul>
         <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
-        <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a></li>
+        <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.username }}</a></li>
         <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
       </ul>
 </div>

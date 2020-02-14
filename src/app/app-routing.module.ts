@@ -19,6 +19,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
+  { path: 'charts', component: ChartsComponent, canActivate: [AuthGuardService] },
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent }
 ];

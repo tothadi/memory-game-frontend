@@ -1,9 +1,7 @@
-import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ResultService } from '../result.service';
 import { AuthenticationService, UserDetails } from '../authentication.service';
-import { Chart } from 'chart.js/dist/Chart.bundle';
-import 'chartjs-plugin-datalabels';
-import 'moment';
+import { Chart } from 'chart.js'
 import 'chartjs-plugin-zoom';
 
 @Component({
@@ -32,8 +30,9 @@ export class ChartsComponent implements OnInit, AfterViewInit {
   gradientFill3;
   gradientFill4;
 
-  public chartClicked(e: any): void { }
-  public chartHovered(e: any): void { }
+  resetZoom() {
+    this.chart[0].resetZoom();
+  }
 
   constructor(public auth: AuthenticationService, private Result: ResultService) {
 
@@ -155,6 +154,7 @@ export class ChartsComponent implements OnInit, AfterViewInit {
             },
           ]
         },
+
         options: {
           responsive: true,
           maintainAspectRatio: false,
@@ -171,10 +171,12 @@ export class ChartsComponent implements OnInit, AfterViewInit {
           animation: {
             easing: 'easeInOutBack'
           },
+
           scales: {
             xAxes: [{
               type: 'time',
               time: {
+                unit: 'day',
                 parser: 'timeFormat',
                 tooltipFormat: 'YYYY.MM.DD HH:mm',
                 displayFormats: {
@@ -212,29 +214,23 @@ export class ChartsComponent implements OnInit, AfterViewInit {
                 size: 20,
               }
             },
-            pan: {
-              enabled: true,
-              mode: "x",
-              speed: 10,
-              threshold: 10
-            },
             zoom: {
-              enabled: true,
-              drag: false,
-              mode: "xy",
-              limits: {
-                max: 10,
-                min: 0.5
-              }
+              pan: {
+                enabled: true,
+                mode: 'xy',
+              },
+              zoom: {
+                enabled: true,
+                mode: 'xy',
+              },
             }
           },
-        }
+        },
+
       }));
 
     }, 1000);
 
-    /*
-*/
   }
 
 }
